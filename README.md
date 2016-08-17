@@ -6,7 +6,7 @@ English was added the the Unofficial Guide team. Original Japanese is included b
 The ESP8266 is a small WiFi module that cost between $6 and $15, with a typical price
 of $10 for the module with accessories built on the dev board such as breadboard breakout pins, LED monitoring lights, and flash. Most of the early excitement around the ESP8266 dealt with adding WiFi support to Arduino boards. However, as $10 (and cheaper) ESP8266 boards have a MCU, flash, and bootloader, people have been running the $10 boards standalone with a battery and using it to connect to a THETA.
 
-<img src='/uploads/default/original/1X/4fa330d2fd443e44d8172835c6c3493face11a5e.png'>
+<img src='http://lists.theta360.guide/uploads/default/original/1X/4fa330d2fd443e44d8172835c6c3493face11a5e.png'>
 
 It's a cool little project and very gratifying to press a remote button and hear the THETA S shutter chirp. :-)
 
