@@ -1,5 +1,70 @@
-#RICOH THETA S Simple Remote Controler <BR>(which a ESP8266 was used)
+#RICOH THETA S Simple Remote Controller <BR>(using ESP8266)
 RICOH THETA S Remote Control Software (Single Button Edition) for Switch Science ESP-WROOM-02 Dev.board
+
+English was added the the Unofficial Guide team. Original Japanese is included below the English.
+
+The ESP8266 is a small WiFi module that cost between $6 and $15, with a typical price
+of $10 for the module with accessories built on the dev board such as breadboard breakout pins, LED monitoring lights, and flash. Most of the early excitement around the ESP8266 dealt with adding WiFi support to Arduino boards. However, as $10 (and cheaper) ESP8266 boards have a MCU, flash, and bootloader, people have been running the $10 boards standalone with a battery and using it to connect to a THETA.
+
+<img src='/uploads/default/original/1X/4fa330d2fd443e44d8172835c6c3493face11a5e.png'>
+
+It's a cool little project and very gratifying to press a remote button and hear the THETA S shutter chirp. :-)
+
+In addition to a remote control unit, building an ESP8266 controller for each THETA opens up the possibility of other scenarios such as triggering multiple THETAs to take pictures at the same time.
+
+Rune Kyndal built a remote shutter for his THETA S camera using [Katsuya Yamamoto's ESP8266 "simple remote" code](https://github.com/katsuya-san/ESP8266-THETA-S-SimpleRemoteControler)
+
+He made a small modification to swap the I/O around to make it work with the I/O available on the smaller ESP-01 board
+
+    const int buttonPin = 0;
+    const int led2Pin = 2;
+
+He used a small Lipo battery and charger circuit and built the required ESP-01 circuit straight onto the 2x4 header. Everything is stuffed inside of a cheap 9v battery case
+
+![](http://lists.theta360.guide/uploads/default/optimized/1X/e9eb4df7a291012916c5f9f1b04dbcc20195c62a_1_375x500.JPG)
+
+![](http://lists.theta360.guide/uploads/default/original/1X/bb5ea8ae5caac85c698cd4ff7e0af0857341ff0c.JPG)
+
+![](http://lists.theta360.guide/uploads/default/original/1X/4d7d5fec31cc109d7c8f04a48b03309c919ff68a.JPG)
+
+Rune's hack uses a AMS1117 3.3v LDO between the ESP and the li-po cell. He's not sure how well that will work when the voltage drops..
+
+The components are:
+
+- ESP-01 board
+- 3.3v LDO
+- 3 resistors
+- 2 leds
+- 1 button
+- 1 battery charger circuit board
+- 1 battery
+- case
+
+## Katsuya-san's ESP8266 THETA S Remote Controller
+[Katsuya-san](https://github.com/katsuya-san) developed two remote control units for the THETA S. One version has a single button control and the other version has full controller features. Both versions are based on the [Switch Science ESP-WROOM-02](https://www.switch-science.com/catalog/2500/) development board. Although it looks like this board is only available in Japan, other 8266 boards are available globally. People in the US should be able to source parts from places like [Adafruit](https://www.adafruit.com/) and [SparkFun](https://www.sparkfun.com/). Although I have not checked their parts inventory, you may be able to find components at places like [Digi-Key](http://www.digikey.com/) and
+ [Mouser Electronics](http://www.mouser.com/).
+
+* [RICOH THETA S Simple Remote Controller ESP8266 GitHub source code and information](https://github.com/katsuya-san/ESP8266-THETA-S-SimpleRemoteControler)
+* [RICOH THETA S Full Remote Controller](https://github.com/katsuya-san/ESP8266-THETA-S-FullRemoteControler)
+
+Pictures from
+[Katsuya-san](https://github.com/katsuya-san), the original author of the code.
+
+<img src='http://lists.theta360.guide/uploads/default/optimized/1X/506280308200e047b2d296dc169c608c8aed99e3_1_613x499.png'>
+
+<img src='http://lists.theta360.guide/uploads/default/original/1X/a3d0ffdd3c856435d5ae2f8e21fdbbde373f9173.png'>
+
+<img src='http://lists.theta360.guide/uploads/default/optimized/1X/dd6c8bef5d402ea65cc01bdcc5e3a8e987dba811_1_690x460.png'>
+
+## General ESP8266 Information
+
+* [ESP8266 Community Wiki](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family)
+* [SparkFun WiFi Module ESP8266](https://www.sparkfun.com/products/13678) $6.95
+* [Adafruit HUZZAH ESP8266 Breakout](https://www.adafruit.com/products/2471) $9.95
+* [Adafruit Feather HUZZAH with ESP8266 WiFi](https://www.adafruit.com/products/2821) $15.95
+* [SparkFun esp8266 Thing Dev Board](https://www.sparkfun.com/products/13711) $15.95
+
+
 ##Example of making hardware
 ケース収納例<BR>
 https://twitter.com/san_san_santa/status/669209324741234688 <BR>
@@ -119,3 +184,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+![Analytics](https://ga-beacon.appspot.com/UA-73311422-5/esp8266-simple-controller)
